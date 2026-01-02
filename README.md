@@ -6,6 +6,24 @@ PrepBuddy is an open-source dashboard for tracking company-prioritized LeetCode 
 
 ![PrepBuddy Dashboard](https://via.placeholder.com/800x400?text=PrepBuddy+Dashboard)
 
+## 🤝 Contributing
+
+> ⚠️ **This project is maintained by a single developer.** Feature contributions are currently restricted.
+
+### What we're accepting:
+- ✅ New company problem sets
+- ✅ Additional questions for existing companies
+- ✅ Data corrections and updates
+- ✅ Bug fixes
+
+### How to contribute questions:
+
+1. Fork the repository
+2. Add your data following the format in [Adding New Company Data](#-adding-new-company-data)
+3. Commit your changes (`git commit -m 'Add [Company] questions'`)
+4. Push to your fork (`git push origin main`)
+5. Open a Pull Request
+
 ## ✨ Features
 
 - 🏢 **Company-Focused Collections** - Browse curated problem sets from top tech companies
@@ -134,25 +152,6 @@ prepbuddy/
 - **Hosting**: Firebase Hosting
 - **Virtualization**: TanStack React Virtual
 - **CSV Parsing**: PapaParse
-
-## 🤝 Contributing
-
-> **Note:** New feature contributions are currently restricted. We are only accepting contributions for **new questions and company data** at this time.
-
-### What we're accepting:
-- ✅ New company problem sets
-- ✅ Additional questions for existing companies
-- ✅ Data corrections and updates
-- ✅ Bug fixes
-
-
-### How to contribute questions:
-
-1. Fork the repository
-2. Add your data following the format in [Adding New Company Data](#-adding-new-company-data)
-3. Commit your changes (`git commit -m 'Add [Company] questions'`)
-4. Push to your fork (`git push origin main`)
-5. Open a Pull Request
 
 ## 📝 Adding New Company Data
 
