@@ -375,14 +375,14 @@ const Dashboard = () => {
         <header className="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg backdrop-blur dark:border-white/10 dark:bg-white/5 dark:shadow-glass">
           <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.35em] text-slate-600 dark:text-white/50">
             <Sparkles className="h-4 w-4 text-blue-600 dark:text-aurora-soft" />
-            PrepBuddy Spotlight
+            Your FAANG Journey Starts Here
           </div>
           <h1 className="mt-3 text-3xl font-semibold text-slate-900 dark:text-white sm:text-4xl">
-            Focus your interview prep, fast
+            Crack FAANG interviews with confidence
           </h1>
           <p className="mt-2 max-w-3xl text-sm text-slate-700 dark:text-white/60">
-            Track company-prioritised LeetCode problems, monitor your progress, surface difficulty trends, and benchmark
-            against peers—all from a single PrepBuddy dashboard.
+            Master the exact problems asked at Google, Meta, Amazon, Apple & Netflix. Track company-prioritized challenges,
+            benchmark against top performers, and land your dream Big Tech offer.
           </p>
         </header>
 
@@ -394,10 +394,10 @@ const Dashboard = () => {
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-700 dark:text-aurora-soft/80">
                   <Gamepad2 className="h-4 w-4" />
-                  Progress Overview
+                  FAANG Readiness
                     <InfoPopover
-                      title="Progress tracker"
-                      description="Keep tabs on how many company-focused problems you have completed."
+                      title="FAANG Readiness Tracker"
+                      description="Track your progress toward interview readiness at top tech companies."
                       bullets={[
                         'Stages unlock as you complete more tracked challenges',
                         'Use Reset Progress if you want to restart from scratch',
@@ -436,11 +436,11 @@ const Dashboard = () => {
                     <span className="hidden sm:inline">Leaderboard</span>
                     <InfoPopover
                       title="Leaderboard insights"
-                      description="See which PrepBuddy members are progressing the fastest this week."
+                      description="See who's crushing their FAANG prep and climbing the ranks."
                       bullets={[
-                        'Ranks update whenever someone marks a problem complete',
-                        'You appear here after you track your first problem',
-                        'We surface the top performers for quick motivation',
+                        'Compete with future FAANG engineers worldwide',
+                        'Ranks update live as you complete problems',
+                        'Top performers get featured for motivation',
                       ]}
                       side="left"
                     />
