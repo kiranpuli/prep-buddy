@@ -35,6 +35,3 @@ lerna-debug.log*
 firebase-debug.log
 firestore-debug.log
 ui-debug.log
-
-# Firebase config (secrets)
-src/config/firebase.ts

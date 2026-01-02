@@ -1,0 +1,44 @@
+import { initializeApp } from 'firebase/app';
+import { getAnalytics, isSupported, type Analytics } from 'firebase/analytics';
+import {
+  browserLocalPersistence,
+  getAuth,
+  GoogleAuthProvider,
+  setPersistence,
+  type Auth,
+} from 'firebase/auth';
+import { getFirestore, type Firestore } from 'firebase/firestore';
+
+// Firebase configuration for hosting and analytics.
+const firebaseConfig = {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+};
+
+const app = initializeApp(firebaseConfig);
+
+let analytics: Analytics | undefined;
+
+if (typeof window !== 'undefined') {
+  void isSupported().then((supported) => {
+    if (supported) {
+      analytics = getAnalytics(app);
+    }
+  });
+}
+
+const auth: Auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
+
+void setPersistence(auth, browserLocalPersistence).catch(() => {
+  // Fallback to default persistence when browser persistence cannot be set.
+});
+
+const db: Firestore = getFirestore(app);
+
+export { app, analytics, auth, googleProvider, db };
