@@ -190,7 +190,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-For questions or feedback, please open an issue on GitHub.
+For questions, feedback, or support, please [open an issue](https://github.com/kiranpuli/prep-buddy/issues) on GitHub.
 
 ---
 
