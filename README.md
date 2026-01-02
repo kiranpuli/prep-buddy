@@ -6,24 +6,6 @@ PrepBuddy is an open-source dashboard for tracking company-prioritized LeetCode 
 
 ![PrepBuddy Dashboard](https://via.placeholder.com/800x400?text=PrepBuddy+Dashboard)
 
-## 🤝 Contributing
-
-> ⚠️ **This project is maintained by a single developer.** Feature contributions are currently restricted.
-
-### What we're accepting:
-- ✅ New company problem sets
-- ✅ Additional questions for existing companies
-- ✅ Data corrections and updates
-- ✅ Bug fixes
-
-### How to contribute questions:
-
-1. Fork the repository
-2. Add your data following the format in [Adding New Company Data](#-adding-new-company-data)
-3. Commit your changes (`git commit -m 'Add [Company] questions'`)
-4. Push to your fork (`git push origin main`)
-5. Open a Pull Request
-
 ## ✨ Features
 
 - 🏢 **Company-Focused Collections** - Browse curated problem sets from top tech companies
@@ -34,6 +16,28 @@ PrepBuddy is an open-source dashboard for tracking company-prioritized LeetCode 
 - 🎨 **Beautiful UI** - Glass-morphism inspired design with dark mode
 - ⚡ **Performance Optimized** - Virtual scrolling for smooth handling of large datasets
 - 🔐 **Google Authentication** - Secure sign-in with Firebase Auth
+
+## 🤝 Contributing
+
+We'd love your help making PrepBuddy the ultimate interview prep resource! Here's how you can contribute:
+
+### What we're looking for:
+- ✅ **New company problem sets** - Add questions from companies not yet covered
+- ✅ **Additional questions** - Expand existing company datasets
+- ✅ **Data corrections** - Fix errors in problem titles, links, or difficulty ratings
+- ✅ **Bug fixes** - Help squash bugs you encounter
+
+> 💡 **Note:** Feature development is currently paused while we focus on expanding our question database.
+
+### How to contribute:
+
+1. Fork the repository
+2. Add your data following the format in [Adding New Company Data](#-adding-new-company-data)
+3. Commit your changes (`git commit -m 'Add [Company] questions'`)
+4. Push to your fork (`git push origin main`)
+5. Open a Pull Request
+
+Every contribution helps thousands of developers prepare for their dream jobs at top tech companies!
 
 ## 🚀 Quick Start
 
