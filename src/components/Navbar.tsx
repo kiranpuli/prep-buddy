@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ChevronDown, Linkedin, LogOut, Moon, Sparkles, Sun, UserCircle } from 'lucide-react';
+import { ChevronDown, LogOut, MessageCircleQuestion, Moon, Sparkles, Sun, UserCircle } from 'lucide-react';
 import { useAuthStore } from '../store/useAuthStore';
 import { useTheme } from '../contexts/ThemeContext';
 
@@ -114,7 +114,7 @@ const Navbar = () => {
                 </button>
 
                 <a
-                  href="https://www.linkedin.com/in/kiran-puli/"
+                  href="https://github.com/kiranpuli/prep-buddy/issues"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-3 flex w-full items-center justify-between rounded-xl border border-blue-400/30 bg-blue-500/10 px-3 py-2 text-sm font-medium text-blue-200/90 transition hover:border-blue-400/60 hover:bg-blue-500/20 hover:text-blue-100"
@@ -122,7 +122,7 @@ const Navbar = () => {
                   role="menuitem"
                 >
                   <span>Contact Support</span>
-                  <Linkedin className="h-4 w-4" />
+                  <MessageCircleQuestion className="h-4 w-4" />
                 </a>
 
                 <button
