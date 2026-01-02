@@ -137,12 +137,25 @@ prepbuddy/
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+> **Note:** New feature contributions are currently restricted. We are only accepting contributions for **new questions and company data** at this time.
+
+### What we're accepting:
+- ✅ New company problem sets
+- ✅ Additional questions for existing companies
+- ✅ Data corrections and updates
+- ✅ Bug fixes
+
+### Currently not accepting:
+- ❌ New features
+- ❌ UI/UX changes
+- ❌ Architecture modifications
+
+### How to contribute questions:
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+2. Add your data following the format in [Adding New Company Data](#-adding-new-company-data)
+3. Commit your changes (`git commit -m 'Add [Company] questions'`)
+4. Push to your fork (`git push origin main`)
 5. Open a Pull Request
 
 ## 📝 Adding New Company Data
