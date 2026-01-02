@@ -145,10 +145,6 @@ prepbuddy/
 - ✅ Data corrections and updates
 - ✅ Bug fixes
 
-### Currently not accepting:
-- ❌ New features
-- ❌ UI/UX changes
-- ❌ Architecture modifications
 
 ### How to contribute questions:
 
