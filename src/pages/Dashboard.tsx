@@ -440,7 +440,7 @@ const Dashboard = () => {
                       bullets={[
                         'Compete with future FAANG engineers worldwide',
                         'Ranks update live as you complete problems',
-                        'Top performers get featured for motivation',
+                        'Top performers get featured',
                       ]}
                       side="left"
                     />
@@ -734,6 +734,19 @@ const Dashboard = () => {
             )}
           </section>
         </div>
+
+        {/* Footer */}
+        <footer className="mt-12 border-t border-slate-200 pt-8 dark:border-white/10">
+          <div className="flex flex-col items-center justify-between gap-4 text-sm text-slate-600 dark:text-white/60 sm:flex-row">
+            <p>© 2026 PrepBuddy. Built for the interview prep community.</p>
+            <nav className="flex gap-6">
+              <a href="/about" className="hover:text-slate-900 dark:hover:text-white">About</a>
+              <a href="/privacy" className="hover:text-slate-900 dark:hover:text-white">Privacy Policy</a>
+              <a href="/terms" className="hover:text-slate-900 dark:hover:text-white">Terms of Service</a>
+              <a href="https://github.com/kiranpuli/prep-buddy" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white">GitHub</a>
+            </nav>
+          </div>
+        </footer>
       </div>
 
       {/* Scroll to Top Button */}

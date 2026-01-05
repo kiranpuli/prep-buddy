@@ -2,6 +2,9 @@ import { useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Loader2 } from 'lucide-react';
 import Dashboard from './pages/Dashboard';
+import About from './pages/About';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 import SignInScreen from './components/SignInScreen';
 import {
   loadTrackedFromStorage,
@@ -106,6 +109,9 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
+      <Route path="/terms" element={<TermsOfService />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
