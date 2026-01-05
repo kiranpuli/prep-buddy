@@ -1,4 +1,5 @@
 import { Loader2, LogIn, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 type SignInScreenProps = {
   onSignIn: () => void;
@@ -34,6 +35,19 @@ const SignInScreen = ({ onSignIn, loading, error }: SignInScreenProps) => {
         </button>
         {error && <p className="mt-6 rounded-xl border border-rose-500/40 bg-rose-500/10 px-4 py-2 text-sm text-rose-100">{error}</p>}
       </div>
+
+      {/* Footer */}
+      <footer className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/10 py-6">
+        <div className="mx-auto flex max-w-3xl flex-col items-center justify-between gap-4 px-6 text-xs text-white/50 sm:flex-row">
+          <p>© 2026 PrepBuddy. Built for the interview prep community.</p>
+          <nav className="flex gap-4">
+            <Link to="/about" className="transition hover:text-white">About</Link>
+            <Link to="/privacy" className="transition hover:text-white">Privacy</Link>
+            <Link to="/terms" className="transition hover:text-white">Terms</Link>
+            <a href="https://github.com/kiranpuli/prep-buddy" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">GitHub</a>
+          </nav>
+        </div>
+      </footer>
     </div>
   );
 };

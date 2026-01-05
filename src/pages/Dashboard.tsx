@@ -1,4 +1,5 @@
 import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowUp, Gamepad2, Loader2, Sparkles, Users, X } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import CompanySwitcher from '../components/CompanySwitcher';
@@ -740,10 +741,10 @@ const Dashboard = () => {
           <div className="flex flex-col items-center justify-between gap-4 text-sm text-slate-600 dark:text-white/60 sm:flex-row">
             <p>© 2026 PrepBuddy. Built for the interview prep community.</p>
             <nav className="flex gap-6">
-              <a href="/about" className="hover:text-slate-900 dark:hover:text-white">About</a>
-              <a href="/privacy" className="hover:text-slate-900 dark:hover:text-white">Privacy Policy</a>
-              <a href="/terms" className="hover:text-slate-900 dark:hover:text-white">Terms of Service</a>
-              <a href="https://github.com/kiranpuli/prep-buddy" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white">GitHub</a>
+              <Link to="/about" className="transition hover:text-slate-900 dark:hover:text-white">About</Link>
+              <Link to="/privacy" className="transition hover:text-slate-900 dark:hover:text-white">Privacy</Link>
+              <Link to="/terms" className="transition hover:text-slate-900 dark:hover:text-white">Terms</Link>
+              <a href="https://github.com/kiranpuli/prep-buddy" target="_blank" rel="noopener noreferrer" className="transition hover:text-slate-900 dark:hover:text-white">GitHub</a>
             </nav>
           </div>
         </footer>
