@@ -145,8 +145,8 @@ const Navbar = () => {
 
       {/* Sign Out Confirmation Modal */}
       {showSignOutModal && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm">
-          <div className="relative mx-4 w-full max-w-md rounded-2xl border border-white/10 bg-slate-900 p-6 shadow-2xl">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/60 p-4 backdrop-blur-sm">
+          <div className="relative my-auto w-full max-w-md rounded-2xl border border-white/10 bg-slate-900 p-6 shadow-2xl">
             <button
               type="button"
               onClick={() => setShowSignOutModal(false)}
