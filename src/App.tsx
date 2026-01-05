@@ -102,16 +102,22 @@ const App = () => {
     );
   }
 
-  if (!user) {
-    return <SignInScreen onSignIn={signInWithGoogle} loading={authBusy} error={authError} />;
-  }
-
+  // Public routes - accessible without authentication (required for AdSense compliance)
   return (
     <Routes>
-      <Route path="/" element={<Dashboard />} />
       <Route path="/about" element={<About />} />
       <Route path="/privacy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<TermsOfService />} />
+      <Route
+        path="/"
+        element={
+          user ? (
+            <Dashboard />
+          ) : (
+            <SignInScreen onSignIn={signInWithGoogle} loading={authBusy} error={authError} />
+          )
+        }
+      />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
