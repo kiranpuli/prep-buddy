@@ -1,6 +1,6 @@
 import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUp, Gamepad2, Loader2, Sparkles, Users, X } from 'lucide-react';
+import { ArrowUp, Gamepad2, Loader2, Rocket, Users, X } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import CompanySwitcher from '../components/CompanySwitcher';
 import DifficultyFilter from '../components/DifficultyFilter';
@@ -375,7 +375,7 @@ const Dashboard = () => {
         {/* Header - Logo and Description */}
         <header className="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg backdrop-blur dark:border-white/10 dark:bg-white/5 dark:shadow-glass">
           <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.35em] text-slate-600 dark:text-white/50">
-            <Sparkles className="h-4 w-4 text-blue-600 dark:text-aurora-soft" />
+            <Rocket className="h-4 w-4 text-blue-600 dark:text-aurora-soft" />
             Your FAANG Journey Starts Here
           </div>
           <h1 className="mt-3 text-3xl font-semibold text-slate-900 dark:text-white sm:text-4xl">

@@ -1,4 +1,4 @@
-import { Loader2, LogIn, Sparkles } from 'lucide-react';
+import { Loader2, LogIn, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 type SignInScreenProps = {
@@ -17,7 +17,7 @@ const SignInScreen = ({ onSignIn, loading, error }: SignInScreenProps) => {
       </div>
       <div className="relative z-10 mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center px-6 text-center">
         <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.35em] text-white/50">
-          <Sparkles className="h-5 w-5 text-aurora-soft" /> PrepBuddy Access
+          <Rocket className="h-5 w-5 text-aurora-soft" /> PrepBuddy Access
         </div>
         <h1 className="mt-6 text-4xl font-semibold text-white sm:text-5xl">Sign in to PrepBuddy</h1>
         <p className="mt-4 max-w-xl text-sm text-white/60">

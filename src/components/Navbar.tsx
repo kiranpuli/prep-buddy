@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { AlertTriangle, ChevronDown, LogOut, MessageCircleQuestion, Moon, Sparkles, Sun, UserCircle, X } from 'lucide-react';
+import { AlertTriangle, ChevronDown, LogOut, MessageCircleQuestion, Moon, Rocket, Sun, UserCircle, X } from 'lucide-react';
 import { useAuthStore } from '../store/useAuthStore';
 import { useTheme } from '../contexts/ThemeContext';
 
@@ -62,7 +62,7 @@ const Navbar = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo/Brand */}
           <div className="flex items-center gap-2">
-            <Sparkles className="h-6 w-6 text-aurora-soft" />
+            <Rocket className="h-6 w-6 text-aurora-soft" />
             <span className="text-xl font-bold text-white">PrepBuddy</span>
             <span className="ml-2 rounded-full border border-aurora-soft/40 bg-aurora-soft/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-aurora-soft/90">
               Beta
