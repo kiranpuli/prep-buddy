@@ -1,107 +1,93 @@
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Shield, Database, Eye, Lock, Users, RefreshCw, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
+const Section = ({ icon: Icon, title, children }: { icon: React.ElementType; title: string; children: React.ReactNode }) => (
+  <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-white/5">
+    <div className="mb-4 flex items-center gap-3">
+      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-500/20">
+        <Icon className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+      </div>
+      <h2 className="text-xl font-semibold">{title}</h2>
+    </div>
+    <div className="space-y-3 text-slate-600 dark:text-white/70">{children}</div>
+  </div>
+);
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-gradient-to-br dark:from-midnight dark:via-slate-950 dark:to-black dark:text-white">
-      <div className="mx-auto max-w-4xl px-6 py-12">
+      <div className="mx-auto max-w-3xl px-6 py-12">
         <Link
           to="/"
-          className="mb-8 inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 dark:text-white/60 dark:hover:text-white"
+          className="mb-8 inline-flex items-center gap-2 text-sm text-slate-500 transition-colors hover:text-slate-900 dark:text-white/50 dark:hover:text-white"
         >
           <ArrowLeft className="h-4 w-4" />
-          Back to Dashboard
+          Back to Home
         </Link>
 
-        <h1 className="mb-8 text-4xl font-bold">Privacy Policy</h1>
-        
-        <div className="prose prose-slate dark:prose-invert max-w-none">
-          <p className="text-lg text-slate-600 dark:text-white/70">
-            Last updated: January 2026
-          </p>
+        <div className="mb-10">
+          <h1 className="mb-2 text-3xl font-bold">Privacy Policy</h1>
+          <p className="text-sm text-slate-500 dark:text-white/50">Last updated: January 2026</p>
+        </div>
 
-          <h2>Introduction</h2>
-          <p>
-            PrepBuddy ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website and services.
-          </p>
+        <div className="space-y-6">
+          <Section icon={Shield} title="Introduction">
+            <p>
+              PrepBuddy is committed to protecting your privacy. This policy explains how we collect, use, and safeguard your information.
+            </p>
+          </Section>
 
-          <h2>Information We Collect</h2>
-          <h3>Information You Provide</h3>
-          <ul>
-            <li><strong>Account Information:</strong> When you sign in with Google, we receive your name, email address, and profile picture.</li>
-            <li><strong>Usage Data:</strong> We track which problems you mark as completed to sync your progress across devices.</li>
-          </ul>
+          <Section icon={Database} title="Information We Collect">
+            <p className="font-medium text-slate-900 dark:text-white">Account Information</p>
+            <p>When you sign in with Google, we receive your name, email, and profile picture.</p>
+            <p className="mt-3 font-medium text-slate-900 dark:text-white">Automatic Data</p>
+            <p>Browser type, device info, IP address, and cookies to maintain your session.</p>
+          </Section>
 
-          <h3>Automatically Collected Information</h3>
-          <ul>
-            <li><strong>Device Information:</strong> Browser type, operating system, and device identifiers.</li>
-            <li><strong>Log Data:</strong> IP address, access times, and pages viewed.</li>
-            <li><strong>Cookies:</strong> We use cookies to maintain your session and preferences.</li>
-          </ul>
+          <Section icon={Eye} title="How We Use Your Data">
+            <ul className="list-inside list-disc space-y-1">
+              <li>Sync your progress across devices</li>
+              <li>Display leaderboard rankings</li>
+              <li>Improve user experience</li>
+              <li>Display relevant advertisements</li>
+            </ul>
+          </Section>
 
-          <h2>How We Use Your Information</h2>
-          <p>We use the collected information to:</p>
-          <ul>
-            <li>Provide, maintain, and improve our services</li>
-            <li>Sync your progress across devices</li>
-            <li>Display your position on the leaderboard</li>
-            <li>Analyze usage patterns to improve user experience</li>
-            <li>Display relevant advertisements</li>
-          </ul>
+          <Section icon={Users} title="Third-Party Services">
+            <p>
+              <span className="font-medium text-slate-900 dark:text-white">Google Analytics</span> — Usage analytics
+            </p>
+            <p>
+              <span className="font-medium text-slate-900 dark:text-white">Google AdSense</span> — Ads display.{' '}
+              <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                Opt out here
+              </a>
+            </p>
+            <p>
+              <span className="font-medium text-slate-900 dark:text-white">Firebase</span> — Authentication & storage.{' '}
+              <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                Privacy policy
+              </a>
+            </p>
+          </Section>
 
-          <h2>Third-Party Services</h2>
-          <h3>Google Analytics</h3>
-          <p>
-            We use Google Analytics to understand how users interact with our website. Google Analytics collects information such as how often users visit, what pages they visit, and what other sites they used prior to coming to our site.
-          </p>
+          <Section icon={Lock} title="Data Security & Your Rights">
+            <p>We implement security measures to protect your data, though no system is 100% secure.</p>
+            <p className="mt-2">You can request access, correction, or deletion of your data at any time.</p>
+          </Section>
 
-          <h3>Google AdSense</h3>
-          <p>
-            We use Google AdSense to display advertisements. Google AdSense uses cookies to serve ads based on your prior visits to our website or other websites. You may opt out of personalized advertising by visiting{' '}
-            <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-              Google Ads Settings
-            </a>.
-          </p>
+          <Section icon={RefreshCw} title="Policy Updates">
+            <p>We may update this policy periodically. Changes will be posted here with an updated date.</p>
+          </Section>
 
-          <h3>Firebase</h3>
-          <p>
-            We use Firebase for authentication and data storage. Firebase's privacy practices can be found at{' '}
-            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-              Firebase Privacy Policy
-            </a>.
-          </p>
-
-          <h2>Data Security</h2>
-          <p>
-            We implement appropriate technical and organizational measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure.
-          </p>
-
-          <h2>Your Rights</h2>
-          <p>You have the right to:</p>
-          <ul>
-            <li>Access the personal information we hold about you</li>
-            <li>Request correction of inaccurate information</li>
-            <li>Request deletion of your data</li>
-            <li>Opt out of personalized advertising</li>
-          </ul>
-
-          <h2>Children's Privacy</h2>
-          <p>
-            Our service is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you are a parent and believe your child has provided us with personal information, please contact us.
-          </p>
-
-          <h2>Changes to This Policy</h2>
-          <p>
-            We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
-          </p>
-
-          <h2>Contact Us</h2>
-          <p>
-            If you have questions about this Privacy Policy, please{' '}
-            <a href="https://github.com/kiranpuli/prep-buddy/issues" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-              open an issue on GitHub
-            </a>.
-          </p>
+          <Section icon={Mail} title="Contact">
+            <p>
+              Questions?{' '}
+              <a href="https://github.com/kiranpuli/prep-buddy/issues" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                Open an issue on GitHub
+              </a>
+            </p>
+          </Section>
         </div>
       </div>
     </div>
