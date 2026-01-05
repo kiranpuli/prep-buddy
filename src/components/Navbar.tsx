@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ChevronDown, LogOut, MessageCircleQuestion, Moon, Sparkles, Sun, UserCircle } from 'lucide-react';
+import { AlertTriangle, ChevronDown, LogOut, MessageCircleQuestion, Moon, Sparkles, Sun, UserCircle, X } from 'lucide-react';
 import { useAuthStore } from '../store/useAuthStore';
 import { useTheme } from '../contexts/ThemeContext';
 
@@ -7,12 +7,14 @@ const Navbar = () => {
   const { user, signOut, authBusy } = useAuthStore();
   const { theme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showSignOutModal, setShowSignOutModal] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const menuId = 'profile-menu';
 
   const handleSignOut = async () => {
     try {
       await signOut();
+      setShowSignOutModal(false);
     } catch (err) {
       console.error('Sign out failed:', err);
     }
@@ -20,7 +22,7 @@ const Navbar = () => {
 
   const handleSignOutClick = () => {
     setMenuOpen(false);
-    void handleSignOut();
+    setShowSignOutModal(true);
   };
 
   const handleToggleMenu = () => {
@@ -140,6 +142,49 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      {/* Sign Out Confirmation Modal */}
+      {showSignOutModal && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <div className="relative mx-4 w-full max-w-md rounded-2xl border border-white/10 bg-slate-900 p-6 shadow-2xl">
+            <button
+              type="button"
+              onClick={() => setShowSignOutModal(false)}
+              className="absolute right-4 top-4 rounded-lg p-1 text-white/50 transition hover:bg-white/10 hover:text-white"
+              aria-label="Close"
+            >
+              <X className="h-5 w-5" />
+            </button>
+
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-amber-500/20">
+              <AlertTriangle className="h-6 w-6 text-amber-400" />
+            </div>
+
+            <h2 className="mb-2 text-xl font-bold text-white">Sign out of PrepBuddy?</h2>
+            <p className="mb-6 text-sm text-white/60">
+              Your progress is saved to your account. You'll need to sign in again to access your data and continue tracking your interview prep.
+            </p>
+
+            <div className="flex gap-3">
+              <button
+                type="button"
+                onClick={() => setShowSignOutModal(false)}
+                className="flex-1 rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-white/10"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                onClick={() => void handleSignOut()}
+                disabled={authBusy}
+                className="flex-1 rounded-xl bg-rose-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-rose-600 disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                {authBusy ? 'Signing out...' : 'Sign Out'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
