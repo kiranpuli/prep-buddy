@@ -213,7 +213,7 @@ const Dashboard = () => {
     };
   }, [initializeLeaderboard, disposeLeaderboard]);
 
-  const topLeaderboardEntries = useMemo(() => leaderboardEntries.slice(0, 8), [leaderboardEntries]);
+  const topLeaderboardEntries = useMemo(() => leaderboardEntries.filter((entry) => entry.trackedCount > 0).slice(0, 8), [leaderboardEntries]);
   const currentUserId = user?.uid ?? null;
   const leaderboardAdSlot = import.meta.env.VITE_ADSENSE_SLOT_SIDEBAR;
   const inlineAdSlot = import.meta.env.VITE_ADSENSE_SLOT_INLINE;
@@ -466,7 +466,7 @@ const Dashboard = () => {
                     No entries yet
                   </div>
                 ) : (
-                  <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-white/10">
+                  <div className="max-h-48 overflow-y-auto rounded-xl border border-slate-200 dark:border-white/10">
                     <table className="w-full text-xs">
                       <tbody className="divide-y divide-slate-200 dark:divide-white/10">
                         {topLeaderboardEntries.map((entry, index) => {
