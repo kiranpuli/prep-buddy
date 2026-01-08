@@ -521,12 +521,6 @@ const Dashboard = () => {
                   </div>
                 )}
               </div>
-              <AdSenseSlot
-                slotId={leaderboardAdSlot}
-                label="Support PrepBuddy"
-                compact
-                className="hidden border-slate-200/60 bg-white/70 text-slate-500 shadow-none dark:border-white/10 dark:bg-slate-900/40 dark:text-white/40 sm:block"
-              />
             </div>
           </div>
 
@@ -662,10 +656,18 @@ const Dashboard = () => {
             <button
               type="button"
               onClick={clearFilters}
-              className="mt-auto rounded-2xl border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-slate-600 transition hover:border-slate-400 hover:bg-slate-200 dark:border-white/10 dark:bg-white/5 dark:text-white/70 dark:hover:border-white/20 dark:hover:bg-white/10"
+              className="rounded-2xl border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-slate-600 transition hover:border-slate-400 hover:bg-slate-200 dark:border-white/10 dark:bg-white/5 dark:text-white/70 dark:hover:border-white/20 dark:hover:bg-white/10"
             >
               Reset Filters
             </button>
+
+            {/* Sidebar Ad */}
+            <AdSenseSlot
+              slotId={leaderboardAdSlot}
+              label="Support PrepBuddy"
+              compact
+              className="mt-auto border-slate-200/60 bg-white/70 text-slate-500 shadow-none dark:border-white/10 dark:bg-slate-900/40 dark:text-white/40"
+            />
           </aside>
 
           {/* Main Content - Problem List */}
