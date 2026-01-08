@@ -524,6 +524,7 @@ const Dashboard = () => {
               <AdSenseSlot
                 slotId={leaderboardAdSlot}
                 label="Support PrepBuddy"
+                compact
                 className="hidden border-slate-200/60 bg-white/70 text-slate-500 shadow-none dark:border-white/10 dark:bg-slate-900/40 dark:text-white/40 sm:block"
               />
             </div>

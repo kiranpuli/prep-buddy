@@ -11,9 +11,10 @@ type AdSenseSlotProps = {
   slotId?: string;
   label?: string;
   className?: string;
+  compact?: boolean;
 };
 
-const AdSenseSlot = ({ slotId, label = 'Sponsored', className }: AdSenseSlotProps) => {
+const AdSenseSlot = ({ slotId, label = 'Sponsored', className, compact = false }: AdSenseSlotProps) => {
   const slotRef = useRef<HTMLModElement | null>(null);
 
   useEffect(() => {
@@ -41,11 +42,11 @@ const AdSenseSlot = ({ slotId, label = 'Sponsored', className }: AdSenseSlotProp
         <ins
           ref={slotRef}
           className="adsbygoogle block w-full"
-          style={{ display: 'block' }}
+          style={{ display: 'block', minHeight: compact ? '100px' : undefined, maxHeight: compact ? '150px' : undefined }}
           data-ad-client="ca-pub-5797243239394127"
           data-ad-slot={slotId}
-          data-ad-format="auto"
-          data-full-width-responsive="true"
+          data-ad-format={compact ? 'rectangle' : 'auto'}
+          data-full-width-responsive={compact ? 'false' : 'true'}
         />
       ) : (
         <div className="flex h-24 items-center justify-center rounded-xl border border-dashed border-slate-300/70 bg-slate-50/80 text-[11px] font-semibold uppercase tracking-[0.35em] text-slate-400 dark:border-white/10 dark:bg-white/5 dark:text-white/30">
