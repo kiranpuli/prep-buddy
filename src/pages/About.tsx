@@ -1,5 +1,6 @@
 import { ArrowLeft, CheckCircle, Rocket, Target, TrendingUp, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import AdSenseSlot from '../components/AdSenseSlot';
 
 const About = () => {
   return (
@@ -123,6 +124,12 @@ const About = () => {
             . We'd love to hear from you!
           </p>
         </div>
+
+        <AdSenseSlot
+          slotId={import.meta.env.VITE_ADSENSE_SLOT_INLINE}
+          label="Sponsored"
+          className="mt-12 border-slate-200/60 bg-white/70 shadow-none dark:border-white/10 dark:bg-slate-900/40"
+        />
       </div>
     </div>
   );
