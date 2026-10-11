@@ -4,7 +4,17 @@
 
 PrepBuddy is an open-source dashboard for tracking company-prioritized LeetCode problems, monitoring your progress, surfacing difficulty trends, and benchmarking against peers—all from a single interface.
 
-![PrepBuddy Dashboard](https://via.placeholder.com/800x400?text=PrepBuddy+Dashboard)
+<p align="center">
+  <video src="https://github.com/kiranpuli/prep-buddy/raw/master/public/prepbuddy-demo.mp4" poster="public/prepbuddy-demo.jpg" controls="controls" width="100%">
+    <a href="https://github.com/kiranpuli/prep-buddy/raw/master/public/prepbuddy-demo.mp4">
+      <img src="public/prepbuddy-demo.jpg" alt="PrepBuddy Demo Video" width="100%" />
+    </a>
+  </video>
+</p>
+
+<p align="center">
+  <em>▶ <a href="https://github.com/kiranpuli/prep-buddy/raw/master/public/prepbuddy-demo.mp4">Watch the 18-second PrepBuddy Product Walkthrough</a></em>
+</p>
 
 ## ✨ Features
 
