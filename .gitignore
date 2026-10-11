@@ -35,3 +35,6 @@ lerna-debug.log*
 firebase-debug.log
 firestore-debug.log
 ui-debug.log
+
+# Brag video generation scratch
+brag-output/

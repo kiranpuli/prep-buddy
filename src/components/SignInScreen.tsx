@@ -9,13 +9,13 @@ type SignInScreenProps = {
 
 const SignInScreen = ({ onSignIn, loading, error }: SignInScreenProps) => {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-midnight via-slate-950 to-black text-white">
+    <div className="relative min-h-screen flex flex-col justify-between overflow-x-hidden bg-gradient-to-br from-midnight via-slate-950 to-black text-white">
       <div className="pointer-events-none absolute inset-0 opacity-70">
         <div className="absolute -top-24 left-1/3 h-72 w-72 rounded-full bg-aurora/20 blur-[120px]" />
         <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-aurora-soft/20 blur-[160px]" />
         <div className="absolute -left-32 bottom-1/3 h-80 w-80 rounded-full bg-emerald-400/10 blur-[140px]" />
       </div>
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center px-6 text-center">
+      <div className="relative z-10 mx-auto flex flex-1 w-full max-w-3xl flex-col items-center justify-center px-6 py-12 text-center">
         <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.35em] text-white/50">
           <Rocket className="h-5 w-5 text-aurora-soft" /> PrepBuddy Access
         </div>
@@ -24,11 +24,23 @@ const SignInScreen = ({ onSignIn, loading, error }: SignInScreenProps) => {
           Connect with Google to unlock your personalised PrepBuddy dashboard. We keep your progress synced across devices so you
           can stay aligned with the companies that matter most.
         </p>
+
+        <div className="mt-8 w-full max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60 shadow-2xl backdrop-blur">
+          <video
+            src="/prepbuddy-demo.mp4"
+            poster="/prepbuddy-demo.jpg"
+            controls
+            playsInline
+            preload="metadata"
+            className="w-full aspect-video rounded-2xl object-cover"
+          />
+        </div>
+
         <button
           type="button"
           onClick={onSignIn}
           disabled={loading}
-          className="mt-10 inline-flex items-center gap-3 rounded-full border border-aurora-soft/40 bg-aurora-soft/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-aurora-soft/90 transition hover:-translate-y-0.5 hover:border-aurora-soft hover:bg-aurora-soft hover:text-slate-950 disabled:cursor-not-allowed disabled:opacity-60"
+          className="mt-8 inline-flex items-center gap-3 rounded-full border border-aurora-soft/40 bg-aurora-soft/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-aurora-soft/90 transition hover:-translate-y-0.5 hover:border-aurora-soft hover:bg-aurora-soft hover:text-slate-950 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : <LogIn className="h-5 w-5" />}
           <span>{loading ? 'Signing in…' : 'Continue with Google'}</span>
@@ -37,7 +49,7 @@ const SignInScreen = ({ onSignIn, loading, error }: SignInScreenProps) => {
       </div>
 
       {/* Footer */}
-      <footer className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/10 py-6">
+      <footer className="relative z-10 border-t border-white/10 py-6">
         <div className="mx-auto flex max-w-3xl flex-col items-center justify-between gap-4 px-6 text-xs text-white/50 sm:flex-row">
           <p>© 2026 PrepBuddy. Built for the interview prep community.</p>
           <nav className="flex gap-4">
